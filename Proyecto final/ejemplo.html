@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where 2 Watch</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.imgur.com/D98nDXS.jpeg'); /* URL directa de la imagen de fondo */
+            background-size: cover; /* Ajuste para que la imagen ocupe todo el tamaño de la ventana del navegador */
+            background-position: center calc(50% + 3cm); /* Ajuste para que la imagen comience unos 3 centímetros más abajo del centro */
+            background-repeat: no-repeat;
+            position: relative; /* Asegura que el contenedor de la página sea relativo para posicionar elementos secundarios */
+        }
+        .banner {
+            max-width: 900px; /* Ancho máximo del banner */
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Centra horizontalmente el banner */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Color de fondo semi-transparente para mejorar la legibilidad del contenido */
+            border-radius: 8px; /* Bordes redondeados para el contenedor */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <img class="banner" src="https://i.imgur.com/P9DGUd1.png" alt="Banner de Where 2 Watch"> <!-- Banner de la página web -->
+    <div class="container">
+        <h1>Where 2 Watch</h1>
+        <p>Contenido de tu página aquí...</p>
+    </div>
+
+    <script>
+        // JavaScript para efecto de paralaje en la imagen de fondo
+        window.addEventListener('scroll', function() {
+            const parallax = document.querySelector('body');
+            let scrollPosition = window.pageYOffset;
+            parallax.style.backgroundPositionY = (scrollPosition * 0.5 + 3) + 'cm'; // Ajusta el factor de paralaje según sea necesario
+        });
+    </script>
+</body>
+</html>
